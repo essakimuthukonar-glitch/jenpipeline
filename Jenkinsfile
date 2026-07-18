@@ -1,10 +1,10 @@
-ipipeline {
+pipeline {
 
     agent any
 
     stages {
 
-        stage("Pull Code from github" ) {
+        stage("Pull Code from github") {
             steps {
                 echo "Pulling code from GitHub"
             }
@@ -22,6 +22,11 @@ ipipeline {
             }
         }
 
-    }
+        stage("Deploy") {
+            steps {
+                echo "Deploying application"
+            }
+        }
 
+    }
 }
